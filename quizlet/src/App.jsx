@@ -12,19 +12,25 @@ const App = () => {
     setFlipped(!flipped);
   };
 
+  
   const handleNext = () => {
-    if (currentCardIndex < data.length - 1) {
-      setCurrentCardIndex(currentCardIndex + 1);
-      setFlipped(false); 
-    }
+    const randomIndex = Math.floor(Math.random() * data.length);
+    setCurrentCardIndex(randomIndex);
+    setFlipped(false); 
   };
 
   const handlePrevious = () => {
+    
     if (currentCardIndex > 0) {
       setCurrentCardIndex(currentCardIndex - 1);
       setFlipped(false); 
     }
   };
+
+  
+  const isNextDisabled = data.length === 0;
+  const isPreviousDisabled = currentCardIndex === 0;
+
 
   return (
     <div className="App">
@@ -35,13 +41,20 @@ const App = () => {
       </div>
       <br />
       <div className={`card-container ${flipped ? 'flipped' : ''}`} onClick={handleFlip}>
-        <Front content={data.length > 0 ? data.at(currentCardIndex)?.Question : 'No cards'} />
-        <Back content={data.length > 0 ? data.at(currentCardIndex)?.Answer : 'No answer'} />
+        {/* Check if data exists before trying to access properties */}
+        {data.length > 0 ? (
+          <>
+            <Front content={data[currentCardIndex].Question} />
+            <Back content={data[currentCardIndex].Answer} />
+          </>
+        ) : (
+          <p>No cards available.</p> // Fallback if data is empty
+        )}
       </div>
 
       <div className="button-container">
-        <button className='button' onClick={handlePrevious} disabled={currentCardIndex === 0}>Previous</button>
-        <button className='button' onClick={handleNext} disabled={currentCardIndex === data.length - 1}>Next</button>
+        <button className='button' onClick={handlePrevious} disabled={isPreviousDisabled}>Previous</button>
+        <button className='button' onClick={handleNext} disabled={isNextDisabled}>Next</button>
       </div>
     </div>
   );

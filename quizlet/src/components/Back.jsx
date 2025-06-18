@@ -1,5 +1,4 @@
 import React from "react";
-// import './Back.css'; // Keep if you have specific styles for Back component
 
 const Back = (props) => {
     const { content } = props; 
