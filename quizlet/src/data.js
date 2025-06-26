@@ -1,47 +1,83 @@
 export const data = [
-    {
-      Question: 'What does AI stand for?',
-      Answer: 'Artificial Intelligence.'
-    },
-    {
-      Question: 'Name the three main types of AI.',
-      Answer: 'Artificial Narrow Intelligence (ANI), Artificial General Intelligence (AGI), and Artificial Super Intelligence (ASI).'
-    },
-    {
-      Question: 'What is Machine Learning (ML)?',
-      Answer: 'A subset of AI that enables systems to learn from data without being explicitly programmed.'
-    },
-    {
-      Question: 'What is Deep Learning (DL)?',
-      Answer: 'A subset of Machine Learning that uses neural networks with multiple layers to learn complex patterns from large amounts of data.'
-    },
-    {
-      Question: 'What is a neural network in AI?',
-      Answer: 'A computational model inspired by the human brain, designed to recognize patterns and make predictions.'
-    },
-    {
-      Question: 'What is Natural Language Processing (NLP)?',
-      Answer: 'A field of AI that focuses on enabling computers to understand, interpret, and generate human language.'
-    },
-    {
-      Question: 'Give an example of AI in everyday life.',
-      Answer: 'Voice assistants (Siri, Alexa), recommendation systems (Netflix, Amazon), spam filters, or facial recognition.'
-    },
-    {
-      Question: 'What is the Turing Test?',
-      Answer: 'A test of a machine\'s ability to exhibit intelligent behavior equivalent to, or indistinguishable from, that of a human.'
-    },
-    {
-      Question: 'What is reinforcement learning?',
-      Answer: 'A type of machine learning where an agent learns to make decisions by performing actions in an environment to maximize a cumulative reward.'
-    },
-    {
-      Question: 'What is the main goal of strong AI (AGI)?',
-      Answer: 'To create machines with human-like cognitive abilities, capable of understanding, learning, and applying intelligence to any intellectual task.'
-    },
-    {
-        Question: 'Who is often credited with coining the term "Artificial Intelligence" in 1955?',
+  {
+    Question: 'What does AI stand for?',
+    Answer: 'Artificial Intelligence.'
+  },
+  {
+    Question: 'Name the three main types of AI.',
+    Answer: 'ANI, AGI, ASI.'
+  },
+  {
+    Question: 'What is Machine Learning (ML)?',
+    Answer: 'AI subset.'
+  },
+  {
+    Question: 'What is Deep Learning (DL)?',
+    Answer: 'ML subset.'
+  },
+  {
+    Question: 'What is a neural network in AI?',
+    Answer: 'Computational model.'
+  },
+  {
+    Question: 'What is Natural Language Processing (NLP)?',
+    Answer: 'Language understanding.'
+  },
+  {
+    Question: 'Give an example of AI in everyday life.',
+    Answer: 'Voice assistant.'
+  },
+  {
+    Question: 'What is the Turing Test?',
+    Answer: 'Intelligence test.'
+  },
+  {
+    Question: 'What is reinforcement learning?',
+    Answer: 'Learning by reward.'
+  },
+  {
+    Question: 'What is the main goal of strong AI (AGI)?',
+    Answer: 'Human cognition.'
+  },
+  {
+    Question: 'What is computer vision?',
+    Answer: 'Visual interpretation.'
+},
+{
+    Question: 'What is an algorithm in the context of AI?',
+    Answer: 'Set rules.'
+},
+{
+    Question: 'What are "training data" used for in Machine Learning?',
+    Answer: 'Model teaching.'
+},
+{
+    Question: 'What is supervised learning?',
+    Answer: 'Labeled data.'
+},
+{
+    Question: 'What is unsupervised learning?',
+    Answer: 'Unlabeled data.'
+},
+{
+    Question: 'What is a chatbot?',
+    Answer: 'AI program.'
+},
+{
+    Question: 'What is an expert system in AI?',
+    Answer: 'Human emulation.'
+},
+{
+    Question: 'What is the difference between AI and automation?',
+    Answer: 'Intelligence vs. tasks.'
+},
+{
+    Question: 'What is ethical AI?',
+    Answer: 'Responsible deployment.'
+},
+{
+    Question: 'Who is often credited with coining the term "Artificial Intelligence" in 1955?',
         
-        Answer: { src: '/johnmccarthy.jpeg', alt: 'Portrait of John McCarthy' }
-      }
+    Answer: { src: '/johnmccarthy.jpeg', alt: 'Portrait of John McCarthy' }
+}
   ];

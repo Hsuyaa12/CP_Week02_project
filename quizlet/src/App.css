@@ -22,6 +22,9 @@ body {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   max-width: 700px;
   width: 90%;
+  display: flex; /* Make App a flex container */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center items horizontally */
 }
 
 h2 {
@@ -54,6 +57,8 @@ h5 {
   position: relative;
   perspective: 1000px; /* For the 3D flip effect */
   cursor: pointer;
+  width: 100%; /* Ensure card takes full available width */
+  box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .front-card, .back-card {
@@ -67,15 +72,16 @@ h5 {
   align-items: center;
   font-size: 1.8em;
   color: #333;
-  backface-visibility: hidden; /* Hide the back face initially */
+  backface-visibility: hidden; 
   border-radius: inherit;
   background-color: #fff;
   transition: transform 0.8s ease-in-out;
-}
+  text-align: center;
+  padding: 20px; }
 
 .back-card {
   transform: rotateY(180deg);
-  background-color: #e0f2f7; /* Light blue for the back of the card */
+  background-color: #e0f2f7; 
 }
 
 .flipped .front-card {
@@ -90,10 +96,12 @@ h5 {
   display: flex;
   justify-content: center;
   gap: 20px; /* Space between buttons */
+  margin-top: 20px; /* Space above buttons */
+  width: 100%; /* Ensure buttons span the width as needed */
 }
 
 .button {
-  background-color: #556b2f; /* Olive green button */
+  background-color: #556b2f; 
   color: white;
   padding: 12px 25px;
   border: none;
@@ -104,10 +112,54 @@ h5 {
 }
 
 .button:hover {
-  background-color: #455623; /* Darker olive green on hover */
-}
+  background-color: #455623; }
 
 .button:disabled {
   background-color: #ccc;
   cursor: not-allowed;
+}
+
+
+.guess-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%; 
+}
+
+.guess-input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 400px;
+  margin-bottom: 10px;
+  font-size: 1em;
+  box-sizing: border-box; 
+}
+
+.submit-button {
+  width: auto; 
+  padding: 10px 20px;
+}
+
+.feedback-message {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.feedback-message.correct {
+  color: #28a745; 
+}
+
+.feedback-message.incorrect {
+  color: #dc3545; 
+}
+
+.image-answer-note {
+  font-size: 0.9em;
+  color: #777;
+  margin-bottom: 15px;
 }
