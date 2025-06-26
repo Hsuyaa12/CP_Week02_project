@@ -1,56 +1,52 @@
-# Web Development Project 2 - AI Knowledge Challenge
+# Web Development Project 3 - Flashcards: AI Knowledge Challenge
 
 Submitted by: **Ayush Bhandari**
 
-This web app: **is a Quizlet-style flashcard application designed to test your knowledge of Artificial Intelligence. It displays questions on the front of a card and reveals the corresponding answer (text or image) when flipped. Users can navigate through the card set sequentially.**
+**This web app allows users to test their understanding of Artificial Intelligence concepts using interactive flashcards. Users can type in their guesses, receive immediate feedback, and navigate through the cards sequentially.**
 
-Time spent: **8** hours spent in total
+Time spent: **9** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [x] **The app displays the title of the card set, a short description, and the total number of cards**
-  - [x] Title of card set is displayed 
-  - [x] A short description of the card set is displayed 
-  - [x] A list of card pairs is created
-  - [x] The total number of cards in the set is displayed 
-  - [x] Card set is represented as a list of card pairs (an array of dictionaries where each dictionary contains the question and answer is perfectly fine)
-- [x] **A single card at a time is displayed**
-  - [x] Only one half of the information pair is displayed at a time
-- [x] **Clicking on the card flips the card over, showing the corresponding component of the information pair**
-  - [x] Clicking on a card flips it over, showing the back with corresponding information 
-  - [x] Clicking on a flipped card again flips it back, showing the front
-- [x] **Clicking on the next button displays a random new card**
-  * *(Note: Current implementation navigates to the next sequential card, not a random one.)*
+- [x] **The user can enter their guess into an input box *before* seeing the flipside of the card**
+  - [x] Application features a clearly labeled input box with a submit button where users can type in a guess
+  - [x] Clicking on the submit button with an **incorrect** answer shows visual feedback that it is wrong
+  - [x] Clicking on the submit button with a **correct** answer shows visual feedback that it is correct
+- [x] **The user can navigate through an ordered list of cardss**
+  - [x] A forward/next button displayed on the card navigates to the next card in a set sequence when clicked
+  - [x] A previous/back button displayed on the card returns to the previous card in the set sequence when clicked
+  - [x] Both the next and back buttons should have some visual indication that the user is at the beginning or end of the list (for example, graying out and no longer being available to click), not allowing for wrap-around navigation
 
 The following **optional** features are implemented:
 
-- [x] Cards contain images in addition to or in place of text
-  - [x] Some or all cards have images in place of or in addition to text
-- [ ] Cards have different visual styles such as color based on their category
-  - Example categories you can use:
-    - Difficulty: Easy/medium/hard
-    - Subject: Biology/Chemistry/Physics/Earth science
-
-The following **additional** features are implemented:
-
-* [x] **Previous button:** Added functionality to navigate to the previous card in the set.
-* [x] **Navigation Disabling:** "Previous" and "Next" buttons are disabled when at the start or end of the card set, respectively.
-* [x] **Basic Responsiveness:** The main app container adjusts its width on smaller screens.
-* [x] **CSS Flip Animation:** Implemented a smooth 3D flip effect using CSS transformations.
+- [ ] Users can use a shuffle button to randomize the order of the cards
+  - [ ] Cards should remain in the same sequence (**NOT** randomized) unless the shuffle button is clicked
+  - [ ] Cards should change to a random sequence once the shuffle button is clicked
+- [x] A user’s answer may be counted as correct even when it is slightly different from the target answer
+  - [x] Answers are considered correct even if they only partially match the answer on the card (specifically, ignoring uppercase/lowercase discrepancies)
+  - [x] Examples: ignoring uppercase/lowercase discrepancies, ignoring punctuation discrepancies, matching only for a particular part of the answer rather than the whole answer (Note: Current implementation normalizes for case and punctuation, but does not support partial matching of the answer string.)
+- [ ] A counter displays the user’s current and longest streak of correct responses
+  - [ ] The current counter increments when a user guesses an answer correctly
+  - [ ] The current counter resets to 0 when a user guesses an answer incorrectly
+  - [ ] A separate counter tracks the longest streak, updating if the value of the current streak counter exceeds the value of the longest streak counter
+- [ ] A user can mark a card that they have mastered and have it removed from the pool of displayed cards
+  - [ ] The user can mark a card to indicate that it has been mastered
+  - [ ] Mastered cards are removed from the pool of displayed cards and added to a list of mastered cards
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented required features:
+Here's a walkthrough of implemented user stories:
 
-[Video Walkthrough](https://imgur.com/a/DkOy1P9) Here is the link if not found : https://imgur.com/a/DkOy1P9
+[Video Walkthrough](https://imgur.com/a/Dbkcy24) Here is the link if not found : https://imgur.com/a/Dbkcy24
 
 
-GIF created with Imgur. 
+GIF created with Imgur.
+
 ## Notes
 
-While building the app, a key challenge was ensuring the CSS flip animation was smooth and correctly managed its `backface-visibility`. Additionally, handling the conditional rendering of either text or an image for the card's answer in the `Back` component required careful state management and data structuring.
+Several challenges were encountered, primarily related to submitting the guess, where color change was difficult for me.
 
 ## License
 
